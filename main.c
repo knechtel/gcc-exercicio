@@ -19,8 +19,7 @@ void printList() {
   }
   printf(" ]");
 }
-//insere no inicio
-void insere(int data){
+void insereNoInicio(int data){
   struct list *list = (struct list*) malloc(sizeof(struct list));
   list->data=data;
   listHead=list;
@@ -39,7 +38,7 @@ void insereNoFim(int data){
 int main(){
   int inteiro = 20;
   int segundoValor = 30;
-  insere(inteiro);
+  insereNoInicio(inteiro);
   insereNoFim(segundoValor);
 
   printList(); 
