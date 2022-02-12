@@ -9,16 +9,15 @@ struct list{
 struct list *listHead = NULL;
 
 void printList() {
-   struct list *ptr = listHead;
-   printf("\n[ ");
+  struct list *ptr = listHead;
+  printf("\n[ ");
 	
-   //start from the beginning
-   while(ptr != NULL) {
-      printf("(%d) ",ptr->data);
-      ptr = ptr->next;
-   }
-	
-   printf(" ]");
+  //start from the beginning
+  while(ptr != NULL) {
+    printf("(%d) ",ptr->data);
+    ptr = ptr->next;
+  }
+  printf(" ]");
 }
 //insere no inicio
 void insere(int data){
@@ -29,7 +28,6 @@ void insere(int data){
 
 void insereNoFim(int data){
   struct list *ptr = listHead;
-  
   while( ptr->next != NULL){
     ptr = ptr->next;
   }
@@ -39,11 +37,11 @@ void insereNoFim(int data){
 }
 
 int main(){
-  int inteiro = 40;
+  int inteiro = 20;
   int segundoValor = 30;
   insere(inteiro);
   insereNoFim(segundoValor);
 
-   printList(); 
-   return 0;
+  printList(); 
+  return 0;
 }
