@@ -8,6 +8,16 @@ struct list{
 
 struct list *listHead = NULL;
 
+void freeList() {
+  struct list *ptr = listHead;
+	
+  while(ptr != NULL) {
+    struct list *ptrAux=ptr;
+    ptr = ptr->next;
+    free(ptrAux);
+  }
+}
+
 void printList() {
   struct list *ptr = listHead;
   printf("\n[ ");
@@ -41,6 +51,7 @@ int main(){
   insereNoInicio(inteiro);
   insereNoFim(segundoValor);
 
-  printList(); 
+  printList();
+  freeList(); 
   return 0;
 }
